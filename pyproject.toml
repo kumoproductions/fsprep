@@ -1,0 +1,22 @@
+[project]
+name = "fsprep"
+version = "0.1.0"
+description = "Prepare a filesystem tree for archival or transfer by normalizing Unicode filenames, removing OS-generated junk, and pruning empty directories"
+readme = "README.md"
+authors = [
+    { name = "Tomoya Eguchi", email = "eguchi@kumo.productions" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+fsprep = "fsprep.__main__:main"
+
+[build-system]
+requires = ["uv_build>=0.10.9,<0.11.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
